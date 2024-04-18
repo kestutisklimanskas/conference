@@ -28,7 +28,21 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'location' => 'required',
+            'visitors' => 'required',
+
+
+        ]);
+
+        Conference::create($request->all());
+
+        return redirect()->route('conferences.index')
+            ->with('success', 'Conference created successfully.');
     }
 
     /**

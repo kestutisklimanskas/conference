@@ -18,6 +18,8 @@ return new class extends Migration
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->string('location');
+            $table->string('image')->nullable();
+            $table->integer('visitors')->default(0);
             $table->timestamps();
         });
     }
