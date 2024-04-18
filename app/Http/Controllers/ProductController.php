@@ -12,7 +12,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $conferences = Conference::latest()->paginate(5);
+
+        return view('conferences.index', compact('conferences'))->with((request()->input('page')));
     }
 
     /**
@@ -50,7 +52,7 @@ class ProductController extends Controller
      */
     public function show(Conference $conference)
     {
-        //
+        return view('conferences.show', compact('conference'));
     }
 
     /**
@@ -58,7 +60,9 @@ class ProductController extends Controller
      */
     public function edit(Conference $conference)
     {
-        //
+        return view('conferences.edit', compact('conference'));
+
+
     }
 
     /**
@@ -66,7 +70,19 @@ class ProductController extends Controller
      */
     public function update(Request $request, Conference $conference)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'location' => 'required',
+            'visitors' => 'required',
+
+
+        ]);
+        $conference->update($request->all());
+        return redirect()->route('conferences.index')
+            ->with('success', 'Conference updated successfully.');
     }
 
     /**
@@ -74,6 +90,9 @@ class ProductController extends Controller
      */
     public function destroy(Conference $conference)
     {
-        //
+        //delete the product
+        $conference->delete();
+        return redirect()->route('conferences.index')->with('success', 'Conference deleted successfully.');
+
     }
 }
