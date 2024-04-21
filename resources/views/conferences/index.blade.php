@@ -9,7 +9,7 @@
         </div>
         <div class = "pull-right">
         <div class="pull-right">
-            <!-- Button trigger modal -->
+            <!-- Created a modal instead of page redirection for creating a conference -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addConferenceModal">Add new Conference</button>
 </div>
         </div>
