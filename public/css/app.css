@@ -1,0 +1,137 @@
+#auth-container {
+    
+    display: flex;
+    justify-content: flex-end;
+}
+#logout-btn {
+    margin-left: 10px!important;
+}
+
+body > h1 > a {
+    padding-left: 15%;
+    margin-top: 25%;
+}
+/* Center the form */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px; /* Adjust width as needed */
+}
+
+/* Style the input fields */
+#login-form div {
+    margin-bottom: 10px;
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#login-form input[type="email"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the login button */
+#login-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#login-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style the register link */
+#login-form a {
+    color: #007bff; /* Blue */
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+#login-form a:hover {
+    text-decoration: underline;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px; /* Adjust width as needed */
+}
+
+/* Style the input fields */
+#register-form div {
+    margin-bottom: 10px;
+}
+
+#register-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#register-form input[type="text"],
+#register-form input[type="email"],
+#register-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the register button */
+#register-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#register-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style the login link */  
+#loginHeader {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#registerHeader{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#loginButton{
+    margin-left: 10px!important;
+    margin-bottom: 10px;
+}
+#registerButton{
+    margin-left: 10px!important;
+    margin-bottom: 10px;
+}
+
+#login-form > a.btn.btn-primary {
+    color: white;
+}
