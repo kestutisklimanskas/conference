@@ -47,14 +47,14 @@
             <div class="form-group
             ">
                 <strong>Start Date:</strong>
-                <input type="text" name="start_date" value="{{ $conference->start_date }}" class="form-control" placeholder="Start Date">
+                <input type="date" name="start_date" value="{{ $conference->start_date }}" class="form-control" placeholder="Start Date">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group
             ">
                 <strong>End Date:</strong>
-                <input type="text" name="end_date" value="{{ $conference->end_date }}" class="form-control" placeholder="End Date">
+                <input type="date" name="end_date" value="{{ $conference->end_date }}" class="form-control" placeholder="End Date">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -68,7 +68,7 @@
             <div class="form-group
             ">
                 <strong>Visitors:</strong>
-                <input type="text" name="visitors" value="{{ $conference->visitors }}" class="form-control" placeholder="Visitors">
+                <input type="number" name="visitors" value="{{ $conference->visitors }}" class="form-control" placeholder="Visitors">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

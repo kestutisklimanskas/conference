@@ -5,12 +5,14 @@
 <div class = "row">
     <div class = "col-lg-12">
         <div class = "pull-left">
-            <h2>Laravel CRUD</h2>
+            <h2>Conferences</h2>
         </div>
         <div class = "pull-right">
         <div class="pull-right">
-            <!-- Created a modal instead of page redirection for creating a conference -->
+
+            @auth
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addConferenceModal">Add new Conference</button>
+    @endauth
 </div>
         </div>
     </div>
@@ -51,11 +53,12 @@
             <td>
                 <form action="{{ route('conferences.destroy',$conference->id) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('conferences.show',$conference->id) }}">Show</a>
+                    @auth
                     <a class="btn btn-primary" href="{{ route('conferences.edit',$conference->id) }}">Edit</a>
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>
-                   
+                   @endauth
                 </form>
             </td>
         </tr>
@@ -91,13 +94,13 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Start Date:</strong>
-            <input type="text" name="start_date" class="form-control" placeholder="Start Date">
+            <input type="date" name="start_date" class="form-control" placeholder="Start Date">
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>End Date:</strong>
-            <input type="text" name="end_date" class="form-control" placeholder="End Date">
+            <input type="date" name="end_date" class="form-control" placeholder="End Date">
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -109,7 +112,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Visitors:</strong>
-            <input type="text" name="visitors" class="form-control" placeholder="Visitors">
+            <input type="number" name="visitors" class="form-control" placeholder="Visitors">
         </div>
     </div>
 
