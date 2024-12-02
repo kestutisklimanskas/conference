@@ -31,13 +31,12 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|max:50|unique:conferences,name',
             'description' => 'required',
-            'start_date' => 'required',
-            'end_date' => 'required',
+            'start_date' => 'required|date|before_or_equal:end_date',
+            'end_date' => 'required|date|after_or_equal:start_date',
             'location' => 'required',
             'visitors' => 'required',
-
 
         ]);
 
@@ -71,10 +70,10 @@ class ProductController extends Controller
     public function update(Request $request, Conference $conference)
     {
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|max:50',
             'description' => 'required',
-            'start_date' => 'required',
-            'end_date' => 'required',
+            'start_date' => 'required|date|before_or_equal:end_date',
+            'end_date' => 'required|date|after_or_equal:start_date',
             'location' => 'required',
             'visitors' => 'required',
 
@@ -90,7 +89,7 @@ class ProductController extends Controller
      */
     public function destroy(Conference $conference)
     {
-        //delete the product
+        
         $conference->delete();
         return redirect()->route('conferences.index')->with('success', 'Conference deleted successfully.');
 

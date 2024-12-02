@@ -8,7 +8,8 @@
         "php": "^8.2",
         "laravel/framework": "^11.0",
         "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "symplify/phpstan-rules": "^13.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -17,8 +18,10 @@
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
+        "phpstan/phpstan": "^1.12",
         "phpunit/phpunit": "^11.0",
-        "spatie/laravel-ignition": "^2.4"
+        "spatie/laravel-ignition": "^2.4",
+        "squizlabs/php_codesniffer": "^3.11"
     },
     "autoload": {
         "psr-4": {

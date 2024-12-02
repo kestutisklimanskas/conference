@@ -3,6 +3,7 @@
 
 @section('content')
 
+@auth
 <div class="row">
     <div class="col-lg-12">
         <div class="pull-left">
@@ -77,6 +78,9 @@
         </div>
     </div>
     
-
-
+@endauth
+@guest
+<div class="alert alert-danger">
+    <strong>You need to log in to see this page.</strong>
+@endguest
 @endsection

@@ -8,7 +8,7 @@ use App\Models\User;
 use resources\views\conferences\index;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth     ;
 use Illuminate\Support\Facades\Session;
 class ApiController extends Controller
 {
@@ -27,7 +27,7 @@ class ApiController extends Controller
         $validateUser = Validator::make($request->all(),[
             'name' => 'required|string',
             'email' => 'required|email|unique:users, email',
-            'password' => 'required|string|confirmed',
+            'password' => 'required|string|min:6',
         ]);
 
         if($validateUser->fails()){
@@ -52,7 +52,7 @@ class ApiController extends Controller
      } catch(\Exception $e){
             return response()->json([
                 'status' => false,
-                'message' => 'Validation failedas',
+                'message' => 'Validation failed',
                 'error' => $e->getMessage(),
             ], 422);
         }
@@ -66,17 +66,17 @@ class ApiController extends Controller
         ]);
 
         if($validateUser->fails()){
-            return response()->json($validateUser->errors()->toJson(), 400);
+            return redirect()->route('login')->with('error', 'Invalid login details');
         }
 
-        if(!Auth::attempt($request->only('email', 'password'))){
-            Session::flash('login_failed', 'Invalid email or password.');
-            
+        if (!Auth::attempt($request->only('email', 'password'))) {
+            return redirect()->route('login')->with('error', 'Invalid login details');
         }
-
+        else {
         $user = Auth::user();
 
         return redirect()->route('conferences.index');
+        }
         
     } catch(\Exception $e){
         return response()->json([
@@ -115,11 +115,11 @@ class ApiController extends Controller
             
         // ], 200);
 
-        if(Auth::check()){
-            Auth::logout();
-            return redirect()->route('login');
-        }
-        //return redirect()->route('login');
+         if(Auth::check()){
+             Auth::logout();
+             return redirect()->route('login');
+         }
+        
 
     }
 }

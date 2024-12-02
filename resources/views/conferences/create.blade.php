@@ -1,14 +1,12 @@
-@extends('conferences.layout');
+@extends('conferences.layout')
 
 
-@section('content');
-
+@section('content')
+@auth
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Add new conference</h2>
-
-
         </div>
         <div class="pull-right">
             <a class="btn btn-primary" href="{{ route('conferences.index') }}">Back</a>
@@ -73,5 +71,9 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
-    
+    @endauth
+    @guest
+    <div class="alert alert-warning">
+        You need to be logged in to see this page.
+    @endguest
  @endsection
