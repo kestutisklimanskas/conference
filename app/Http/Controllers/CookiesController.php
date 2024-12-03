@@ -18,7 +18,7 @@ class CookiesController extends Controller
 
     public function getCookie(Request $request)
     {
-        return response($request->cookie('name'););
+        return response($request->cookie('name'));
     }
 
     public function forgetCookie(Request $request)

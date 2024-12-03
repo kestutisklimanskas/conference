@@ -11,17 +11,17 @@ use Illuminate\Support\Facades\Auth;
 
 class ApiController extends Controller
 {
-    public function showRegistrationForm()
+    public function showRegistrationForm(): \Illuminate\Contracts\View\View
     {
         return view('register');
     }
 
-    public function showLoginForm()
+    public function showLoginForm() : \Illuminate\Contracts\View\View
     {
         return view('login');
     }
 
-    public function register(Request $request)
+    public function register(Request $request)  : \Illuminate\Http\RedirectResponse
     {
         try {
             $this->validateRegister($request);
@@ -72,7 +72,7 @@ class ApiController extends Controller
         );
     }
 
-    public function logout(Request $request)
+    public function logout(Request $request): \Illuminate\Http\RedirectResponse
     {
         $user = $request->user();
         if ($user && $user->currentAccessToken()) {
@@ -114,12 +114,10 @@ class ApiController extends Controller
 
     protected function createUser(Request $request): User
     {
-        return User::create(
-            [
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            ]
-        );
+        return User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
+        ]);
     }
 }

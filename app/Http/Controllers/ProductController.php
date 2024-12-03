@@ -10,7 +10,7 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index(Request $request): \Illuminate\Contracts\View\View   
     {
         $conferences = Conference::latest()->paginate(5);
 
@@ -49,7 +49,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Conference $conference)
+    public function edit(Conference $conference): \Illuminate\Contracts\View\View
     {
         return view('conferences.edit', compact('conference'));
     }
@@ -57,7 +57,7 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Conference $conference)
+    public function update(Request $request, Conference $conference): \Illuminate\Http\RedirectResponse
     {
         $this->validateConference($request, $conference->id);
 
