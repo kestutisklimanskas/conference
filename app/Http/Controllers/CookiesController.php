@@ -5,9 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cookie;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Session;
-use App\Models\User;
 
 class CookiesController extends Controller
 {
@@ -21,8 +18,7 @@ class CookiesController extends Controller
 
     public function getCookie(Request $request)
     {
-        $value = $request->cookie('name');
-        echo $value;
+        return response($request->cookie('name'););
     }
 
     public function forgetCookie(Request $request)
@@ -32,12 +28,16 @@ class CookiesController extends Controller
         return $response;
     }
 
+    /**
+     * Check if the cookie has been set.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+
     public function checkCookie(Request $request)
     {
-        if ($request->cookie('name') !== null) {
-            echo 'The cookie has been set.';
-        } else {
-            echo 'The cookie has not been set.';
-        }
+        $message = $request->cookie('name') !== null ? 'The cookie has been set.' : 'The cookie has not been set.';
+        return response($message);
     }
 }

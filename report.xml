@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metrics generated="2024-12-02T20:48:39" pdepend="@package_version@" ahh="1.75" andc="0.36363636363636" calls="81" ccn="29" ccn2="30" cloc="60" clsa="1" clsc="7" eloc="263" fanout="12" leafs="4" lloc="119" loc="396" maxDIT="2" ncloc="336" noc="8" nof="0" noi="0" nom="21" nop="4" roots="4">
+  <files>
+    <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\API\ApiController.php" loc="126" cloc="12" eloc="95" lloc="45" ncloc="114"/>
+    <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\Controller.php" loc="9" cloc="1" eloc="5" lloc="1" ncloc="8"/>
+    <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\CookiesController.php" loc="44" cloc="0" eloc="37" lloc="23" ncloc="44"/>
+    <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\GuestController.php" loc="19" cloc="3" eloc="12" lloc="6" ncloc="16"/>
+    <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\ProductController.php" loc="98" cloc="21" eloc="57" lloc="23" ncloc="77"/>
+    <file name="C:\xampp\htdocs\conferences\app\Models\Conference.php" loc="22" cloc="0" eloc="17" lloc="5" ncloc="22"/>
+    <file name="C:\xampp\htdocs\conferences\app\Models\User.php" loc="51" cloc="16" eloc="26" lloc="10" ncloc="35"/>
+    <file name="C:\xampp\htdocs\conferences\app\Providers\AppServiceProvider.php" loc="27" cloc="7" eloc="14" lloc="6" ncloc="20"/>
+  </files>
+  <package name="App\Http\Controllers\API" noc="1" noi="0" nom="6" nof="0" cr="0.15" rcr="0.2775">
+    <class name="ApiController" fqname="App\Http\Controllers\API\ApiController" start="13" end="125" loc="113" cloc="12" eloc="76" lloc="30" ncloc="101" dit="1" noam="6" nocc="0" noom="0" nom="6" cr="0.15" rcr="0.181875" ca="0" cbo="5" ce="5" impl="0" cis="6" csz="6" npm="6" vars="0" varsi="0" varsnp="0" wmc="14" wmci="14" wmcnp="14">
+      <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\API\ApiController.php"/>
+      <method name="showRegistrationForm" start="15" end="18" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+      <method name="showLoginForm" start="20" end="23" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+      <method name="register" start="24" end="59" ccn="3" ccn2="3" loc="36" cloc="6" eloc="24" lloc="8" ncloc="30" npath="3" hnt="90" hnd="43" hv="488.36382792319" hd="12.133333333333" hl="0.082417582417582" he="5925.4811121347" ht="329.19339511859" hb="0.10915102642021" hi="40.249766037625" mi="50.661995571627"/>
+      <method name="login" start="60" end="88" ccn="4" ccn2="4" loc="29" cloc="0" eloc="24" lloc="10" ncloc="29" npath="5" hnt="94" hnd="41" hv="503.6098884341" hd="17.307692307692" hl="0.057777777777778" he="8716.3249921287" ht="484.24027734048" hb="0.14117821561465" hi="29.097460220637" mi="50.43401045235"/>
+      <method name="profile" start="89" end="99" ccn="1" ccn2="1" loc="11" cloc="0" eloc="10" lloc="2" ncloc="11" npath="1" hnt="39" hnd="22" hv="173.91783312685" hd="8.6538461538462" hl="0.11555555555556" he="1505.0581712901" ht="83.614342849449" hb="0.043777161902068" hi="20.097171827992" mi="62.364614081448"/>
+      <method name="logout" start="100" end="124" ccn="3" ccn2="4" loc="25" cloc="6" eloc="12" lloc="8" ncloc="19" npath="6" hnt="42" hnd="19" hv="178.41295556463" hd="10.545454545455" hl="0.094827586206897" he="1881.445713227" ht="104.52476184595" hb="0.050801110561651" hi="16.918469924232" mi="60.156250242001"/>
+    </class>
+  </package>
+  <package name="App\Http\Controllers" noc="4" noi="0" nom="12" nof="0" cr="0.2775" rcr="0.15">
+    <class name="Controller" fqname="App\Http\Controllers\Controller" start="5" end="8" loc="4" cloc="1" eloc="0" lloc="0" ncloc="3" dit="0" noam="0" nocc="4" noom="0" nom="0" cr="0.66" rcr="0.15" ca="0" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0" vars="0" varsi="0" varsnp="0" wmc="0" wmci="0" wmcnp="0">
+      <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\Controller.php"/>
+    </class>
+    <class name="CookiesController" fqname="App\Http\Controllers\CookiesController" start="12" end="43" loc="32" cloc="0" eloc="22" lloc="12" ncloc="32" dit="1" noam="4" nocc="0" noom="0" nom="4" cr="0.15" rcr="0.181875" ca="0" cbo="3" ce="3" impl="0" cis="4" csz="4" npm="4" vars="0" varsi="0" varsnp="0" wmc="5" wmci="5" wmcnp="5">
+      <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\CookiesController.php"/>
+      <method name="setCookie" start="14" end="20" ccn="1" ccn2="1" loc="7" cloc="0" eloc="6" lloc="4" ncloc="7" npath="1" hnt="25" hnd="16" hv="100" hd="5.4444444444444" hl="0.18367346938776" he="544.44444444444" ht="30.246913580247" hb="0.022225308213405" hi="18.367346938776" mi="68.886907386765"/>
+      <method name="getCookie" start="22" end="26" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="11" hnd="9" hv="34.869175015865" hd="7" hl="0.14285714285714" he="244.08422511106" ht="13.560234728392" hb="0.013018827926731" hi="4.9813107165522" mi="75.931985205709"/>
+      <method name="forgetCookie" start="28" end="33" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="3" ncloc="6" npath="1" hnt="17" hnd="12" hv="60.94436251226" hd="5" hl="0.2" he="304.7218125613" ht="16.928989586739" hb="0.015094350855465" hi="12.188872502452" mi="72.120062430965"/>
+      <method name="checkCookie" start="35" end="42" ccn="2" ccn2="2" loc="8" cloc="0" eloc="7" lloc="3" ncloc="8" npath="2" hnt="17" hnd="13" hv="62.907475208399" hd="9.6" hl="0.10416666666667" he="603.91176200063" ht="33.550653444479" hb="0.023815574956265" hi="6.5528620008749" mi="68.7015190576"/>
+    </class>
+    <class name="GuestController" fqname="App\Http\Controllers\GuestController" start="7" end="19" loc="13" cloc="3" eloc="4" lloc="2" ncloc="10" dit="1" noam="1" nocc="0" noom="0" nom="1" cr="0.15" rcr="0.181875" ca="0" cbo="1" ce="1" impl="0" cis="1" csz="1" npm="1" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\GuestController.php"/>
+      <method name="continueAsGuest" start="9" end="18" ccn="1" ccn2="1" loc="10" cloc="3" eloc="4" lloc="2" ncloc="7" npath="1" hnt="15" hnd="11" hv="51.891474279559" hd="6" hl="0.16666666666667" he="311.34884567736" ht="17.297158093186" hb="0.015312411273262" hi="8.6485790465932" mi="74.723057266607"/>
+    </class>
+    <class name="ProductController" fqname="App\Http\Controllers\ProductController" start="8" end="97" loc="90" cloc="21" eloc="43" lloc="13" ncloc="69" dit="1" noam="7" nocc="0" noom="0" nom="7" cr="0.15" rcr="0.181875" ca="0" cbo="2" ce="2" impl="0" cis="7" csz="7" npm="7" vars="0" varsi="0" varsnp="0" wmc="7" wmci="7" wmcnp="7">
+      <file name="C:\xampp\htdocs\conferences\app\Http\Controllers\ProductController.php"/>
+      <method name="index" start="13" end="18" ccn="1" ccn2="1" loc="6" cloc="0" eloc="4" lloc="2" ncloc="6" npath="1" hnt="24" hnd="16" hv="96" hd="5.8333333333333" hl="0.17142857142857" he="560" ht="31.111111111111" hb="0.022646656696557" hi="16.457142857143" mi="72.852292838728"/>
+      <method name="create" start="23" end="26" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+      <method name="store" start="31" end="47" ccn="1" ccn2="1" loc="17" cloc="0" eloc="13" lloc="3" ncloc="17" npath="1" hnt="45" hnd="25" hv="208.97352853986" hd="6.1176470588235" hl="0.16346153846154" he="1278.4262922439" ht="71.023682902437" hb="0.03926412055452" hi="34.159134472862" mi="59.320667228468"/>
+      <method name="show" start="52" end="55" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="11" hnd="10" hv="36.541209043761" hd="5.25" hl="0.19047619047619" he="191.84134747975" ht="10.657852637764" hb="0.011087668241344" hi="6.9602302940497" mi="78.514964679948"/>
+      <method name="edit" start="60" end="65" ccn="1" ccn2="1" loc="6" cloc="0" eloc="3" lloc="1" ncloc="6" npath="1" hnt="11" hnd="10" hv="36.541209043761" hd="5.25" hl="0.19047619047619" he="191.84134747975" ht="10.657852637764" hb="0.011087668241344" hi="6.9602302940497" mi="78.514964679948"/>
+      <method name="update" start="70" end="85" ccn="1" ccn2="1" loc="16" cloc="0" eloc="13" lloc="3" ncloc="16" npath="1" hnt="45" hnd="25" hv="208.97352853986" hd="6.1176470588235" hl="0.16346153846154" he="1278.4262922439" ht="71.023682902437" hb="0.03926412055452" hi="34.159134472862" mi="59.320667228468"/>
+      <method name="destroy" start="90" end="96" ccn="1" ccn2="1" loc="7" cloc="0" eloc="4" lloc="2" ncloc="7" npath="1" hnt="15" hnd="11" hv="51.891474279559" hd="6" hl="0.16666666666667" he="311.34884567736" ht="17.297158093186" hb="0.015312411273262" hi="8.6485790465932" mi="74.723057266607"/>
+    </class>
+  </package>
+  <package name="App\Models" noc="2" noi="0" nom="1" nof="0" cr="0.15" rcr="0.405">
+    <class name="Conference" fqname="App\Models\Conference" start="8" end="21" loc="14" cloc="0" eloc="0" lloc="0" ncloc="14" dit="2" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.2775" ca="1" cbo="0" ce="0" impl="0" cis="0" csz="1" npm="0" vars="1" varsi="1" varsnp="0" wmc="0" wmci="0" wmcnp="0">
+      <file name="C:\xampp\htdocs\conferences\app\Models\Conference.php"/>
+    </class>
+    <class name="User" fqname="App\Models\User" start="12" end="50" loc="39" cloc="15" eloc="6" lloc="1" ncloc="24" dit="2" noam="1" nocc="0" noom="0" nom="1" cr="0.15" rcr="0.2775" ca="1" cbo="0" ce="0" impl="0" cis="0" csz="3" npm="0" vars="2" varsi="2" varsnp="0" wmc="1" wmci="1" wmcnp="0">
+      <file name="C:\xampp\htdocs\conferences\app\Models\User.php"/>
+      <method name="casts" start="43" end="49" ccn="1" ccn2="1" loc="7" cloc="0" eloc="6" lloc="1" ncloc="7" npath="1" hnt="13" hnd="11" hv="44.972611042285" hd="7.875" hl="0.12698412698413" he="354.15931195799" ht="19.675517331" hb="0.016685703503055" hi="5.7108077514013" mi="71.316969334197"/>
+    </class>
+  </package>
+  <package name="App\Providers" noc="1" noi="0" nom="2" nof="0" cr="0.15" rcr="0.2775">
+    <class name="AppServiceProvider" fqname="App\Providers\AppServiceProvider" start="9" end="26" loc="18" cloc="7" eloc="5" lloc="1" ncloc="11" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.2775" ca="0" cbo="1" ce="1" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\xampp\htdocs\conferences\app\Providers\AppServiceProvider.php"/>
+      <method name="register" start="14" end="17" ccn="1" ccn2="1" loc="4" cloc="1" eloc="2" lloc="0" ncloc="3" npath="1" hnt="2" hnd="2" hv="2" hd="2" hl="0.5" he="4" ht="0.22222222222222" hb="0.00083994736659658" hi="1" mi="91.191023588314"/>
+      <method name="boot" start="22" end="25" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+    </class>
+  </package>
+</metrics>

@@ -10,11 +10,11 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $conferences = Conference::latest()->paginate(5);
 
-        return view('conferences.index', compact('conferences'))->with((request()->input('page')));
+        return view('conferences.index', compact('conferences'))->with('page', $request->input('page'));
     }
 
     /**
@@ -30,15 +30,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|max:50|unique:conferences,name',
-            'description' => 'required',
-            'start_date' => 'required|date|before_or_equal:end_date',
-            'end_date' => 'required|date|after_or_equal:start_date',
-            'location' => 'required',
-            'visitors' => 'required',
-
-        ]);
+        $this->validateConference($request);
 
         Conference::create($request->all());
 
@@ -60,8 +52,6 @@ class ProductController extends Controller
     public function edit(Conference $conference)
     {
         return view('conferences.edit', compact('conference'));
-
-
     }
 
     /**
@@ -69,17 +59,10 @@ class ProductController extends Controller
      */
     public function update(Request $request, Conference $conference)
     {
-        $request->validate([
-            'name' => 'required|max:50',
-            'description' => 'required',
-            'start_date' => 'required|date|before_or_equal:end_date',
-            'end_date' => 'required|date|after_or_equal:start_date',
-            'location' => 'required',
-            'visitors' => 'required',
+        $this->validateConference($request, $conference->id);
 
-
-        ]);
         $conference->update($request->all());
+
         return redirect()->route('conferences.index')
             ->with('success', 'Conference updated successfully.');
     }
@@ -89,9 +72,28 @@ class ProductController extends Controller
      */
     public function destroy(Conference $conference)
     {
-        
         $conference->delete();
-        return redirect()->route('conferences.index')->with('success', 'Conference deleted successfully.');
 
+        return redirect()->route('conferences.index')->with('success', 'Conference deleted successfully.');
+    }
+
+    /**
+     * Validate the conference request.
+     */
+    protected function validateConference(Request $request, $conferenceId = null)
+    {
+        $uniqueNameRule = 'unique:conferences,name';
+        if ($conferenceId) {
+            $uniqueNameRule .= ',' . $conferenceId;
+        }
+
+        $request->validate([
+            'name' => 'required|max:50|' . $uniqueNameRule,
+            'description' => 'required',
+            'start_date' => 'required|date|before_or_equal:end_date',
+            'end_date' => 'required|date|after_or_equal:start_date',
+            'location' => 'required',
+            'visitors' => 'required',
+        ]);
     }
 }
